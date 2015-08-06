@@ -114,7 +114,6 @@ def run(cmd)
   end
 end
 
-run "while true; do pstree; ps aux --cols 12222; jps -lv sleep 2; done &>/tmp/pstree.log &"
 
 def sudo(cmd)
   run("sudo #{cmd}")
