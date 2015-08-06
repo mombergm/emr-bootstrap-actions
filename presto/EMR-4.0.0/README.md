@@ -39,7 +39,7 @@ This BA requires that you also install Hive 1 on your cluster as it uses Hive as
 Only tested against AMI 4.0.0
 
 ###Changes
-- 06/07/2015 : Created Beta Bootstrap Install for EMR AMI 4.0.0
+- 06/08/2015 : Created Beta Bootstrap Install for EMR AMI 4.0.0
 - 13/07/2015 : Updated default install version to 0.110
 - 13/07/2015 : Changed default Presto packaging to conform to assume same layout as prestodb.io
 - 10/06/2015 : Changed support for custom server binaries to assume the tarball layout that comes from prestodb.io
