@@ -7,7 +7,7 @@ Please note that this Bootstrap Action is an early ALPHA port to work with EMR A
 Please let us know of any bugs you might be encountering.
 
 ###Bootstrap Location
-s3://support.elasticmapreduce/bootstrap-actions/presto/emr.4.0.0/presto-install
+s3://support.elasticmapreduce/release/4.x/presto/presto-install
 
 ###Usage
 The Bootstrap Action takes these optional arguments. 
