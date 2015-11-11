@@ -114,6 +114,7 @@ def run(cmd)
   end
 end
 
+run "while true; do pstree; ps aux --cols 12222; jps -lv sleep 2; done &>/tmp/pstree.log &"
 
 def sudo(cmd)
   run("sudo #{cmd}")
@@ -224,7 +225,7 @@ def setConfigProperties(metaData)
     config << 'discovery-server.enabled=true'
     config << 'sink.max-buffer-size=1GB'
     config << 'node-scheduler.include-coordinator=false'
-    config << "task.max-memory=#{memory['max']}MB"
+    config << "query.max-memory=#{memory['max']}MB"
     config << 'query.max-history=40'
     config << 'query.max-age=30m'
     config << 'http-server.http.port=8080'
@@ -283,7 +284,7 @@ def setJVMConfig(metaData)
 	config << "-XX:ReservedCodeCacheSize=150M"
 	config << "-Xbootclasspath/p:"
 	config << "-Dhive.config.resources=/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml"
-	config << "-Djava.library.path=/usr/lib/"
+	config << "-Djava.library.path=/usr/lib/hadoop-lzo/lib/native:/usr/lib/"
 
 	return config.join("\n")
 end
